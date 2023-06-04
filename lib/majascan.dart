@@ -1,8 +1,6 @@
 import 'dart:async';
-import 'dart:ui';
 
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 
 class MajaScan {
   static const MethodChannel _channel = const MethodChannel('majascan');
@@ -22,7 +20,7 @@ class MajaScan {
     Map<String, String> scanArgs = {
       ScanArgs.TITLE: title,
       ScanArgs.FLASHLIGHT: flashlight.toString(),
-      ScanArgs.SCAN_AREA_SCALE: scanAreaScale.toString(), 
+      ScanArgs.SCAN_AREA_SCALE: scanAreaScale.toString(),
     };
 
     if (barColor != null) {
@@ -40,7 +38,7 @@ class MajaScan {
 
     if (qRScannerColor != null) {
       scanArgs[ScanArgs.QR_SCANNER_COLOR] =
-      '#${qRScannerColor.value.toRadixString(16)}';
+          '#${qRScannerColor.value.toRadixString(16)}';
     }
 
     final String? result = await _channel.invokeMethod('scan', scanArgs);
