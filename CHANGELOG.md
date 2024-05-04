@@ -1,3 +1,7 @@
+## 0.6.0
+
+* example: deprecated imperative apply of Flutter's Gradle plugins
+
 ## 0.5.0
 * null-safety
 ## 0.3.8

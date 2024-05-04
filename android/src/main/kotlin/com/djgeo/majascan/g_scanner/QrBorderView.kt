@@ -35,7 +35,7 @@ class QrBorderView @JvmOverloads constructor(
         height = h.toFloat()
     }
 
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
         //Draw border
